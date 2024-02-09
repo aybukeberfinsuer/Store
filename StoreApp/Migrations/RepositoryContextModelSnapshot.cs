@@ -22,10 +22,10 @@ namespace StoreApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("PrdoductName")
+                    b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Price")
+                    b.Property<string>("ProductName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -36,20 +36,20 @@ namespace StoreApp.Migrations
                         new
                         {
                             Id = 1,
-                            PrdoductName = "Computer",
-                            Price = 17000m
+                            Price = 17000m,
+                            ProductName = "Computer"
                         },
                         new
                         {
                             Id = 2,
-                            PrdoductName = "Keyboard",
-                            Price = 1000m
+                            Price = 1000m,
+                            ProductName = "Keyboard"
                         },
                         new
                         {
                             Id = 3,
-                            PrdoductName = "Mouse",
-                            Price = 500m
+                            Price = 500m,
+                            ProductName = "Mouse"
                         });
                 });
 #pragma warning restore 612, 618

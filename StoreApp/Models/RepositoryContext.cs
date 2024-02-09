@@ -14,9 +14,9 @@ namespace StoreApp.Models
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Product>().HasData(
-                new Product(){Id=1, PrdoductName="Computer", Price=17_000},
-                new Product(){Id=2, PrdoductName="Keyboard", Price=1_000},
-                new Product(){Id=3, PrdoductName="Mouse", Price=500}
+                new Product(){Id=1, ProductName="Computer", Price=17_000},
+                new Product(){Id=2, ProductName="Keyboard", Price=1_000},
+                new Product(){Id=3, ProductName="Mouse", Price=500}
                 
             );
         }

@@ -4,7 +4,7 @@
 
 namespace StoreApp.Migrations
 {
-    public partial class init : Migration
+    public partial class initalandseeding : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,13 +14,28 @@ namespace StoreApp.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    PrdoductName = table.Column<string>(type: "TEXT", nullable: true),
+                    ProductName = table.Column<string>(type: "TEXT", nullable: true),
                     Price = table.Column<decimal>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "Price", "ProductName" },
+                values: new object[] { 1, 17000m, "Computer" });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "Price", "ProductName" },
+                values: new object[] { 2, 1000m, "Keyboard" });
+
+            migrationBuilder.InsertData(
+                table: "Products",
+                columns: new[] { "Id", "Price", "ProductName" },
+                values: new object[] { 3, 500m, "Mouse" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

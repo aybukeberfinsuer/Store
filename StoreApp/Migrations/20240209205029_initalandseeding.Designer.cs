@@ -10,8 +10,8 @@ using StoreApp.Models;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240209182808_init")]
-    partial class init
+    [Migration("20240209205029_initalandseeding")]
+    partial class initalandseeding
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,15 +24,35 @@ namespace StoreApp.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("PrdoductName")
+                    b.Property<decimal>("Price")
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Price")
+                    b.Property<string>("ProductName")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Price = 17000m,
+                            ProductName = "Computer"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Price = 1000m,
+                            ProductName = "Keyboard"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Price = 500m,
+                            ProductName = "Mouse"
+                        });
                 });
 #pragma warning restore 612, 618
         }

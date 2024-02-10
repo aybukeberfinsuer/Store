@@ -1,26 +1,14 @@
-@model List<StoreApp.Models.Product>
 
-<!DOCTYPE html>
-<html lang="en">
+@model List<Product>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+@section Footer{
 
-<body>
-@foreach(StoreApp.Models.Product prd in Model){
-    <div>
-        <h4>@prd.ProductName</h4>
-        <p>
-            @prd.Price
-        </p>
-        <p>
-            <a href="product/get/@prd.Id" >Get Details </a>
-        </p>
-    </div>
+    <div>Only for Index footer</div>
 }
-</body>
 
-</html>
+
+@foreach (Product prd in Model)
+{
+    <partial name="_ProductCard" model="@prd" />
+    
+}

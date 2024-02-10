@@ -9,6 +9,8 @@ options.UseSqlite(builder.Configuration.GetConnectionString("sqlconnection"));
 });
 
 var app = builder.Build();
+
+app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
 

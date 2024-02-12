@@ -7,6 +7,8 @@
     <p>
         @Model.Price.ToString("c")
     </p>
-    <a asp-action="Get" asp-route-id="@Model.Id" >Get Details</a>
+    <a class="btn btn-primary" asp-action="Get" asp-route-id="@Model.Id" >
+        <i class="fa-solid fa-arrow-right"></i>
+        Get Details</a>
     <hr>
 </div>

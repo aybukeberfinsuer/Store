@@ -9,6 +9,18 @@
       "PackagePath": "staticwebassets\\html\\Error.html"
     },
     {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\computer.jpeg",
+      "PackagePath": "staticwebassets\\images\\computer.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\keyboard.jpeg",
+      "PackagePath": "staticwebassets\\images\\keyboard.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\mouse.jpeg",
+      "PackagePath": "staticwebassets\\images\\mouse.jpeg"
+    },
+    {
       "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

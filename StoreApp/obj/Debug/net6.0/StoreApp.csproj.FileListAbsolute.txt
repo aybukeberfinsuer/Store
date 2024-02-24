@@ -55,3 +55,5 @@ c:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\obj\Debug\net6.0\StoreApp.
 c:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\obj\Debug\net6.0\StoreApp.csproj.CopyComplete
 C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\StoreApp.staticwebassets.runtime.json
 C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\libman.json
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Entities.dll
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Entities.pdb

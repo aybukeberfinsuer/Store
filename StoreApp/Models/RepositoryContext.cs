@@ -1,3 +1,4 @@
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace StoreApp.Models
@@ -22,4 +23,6 @@ namespace StoreApp.Models
         }
 
     }
+
+    
 }

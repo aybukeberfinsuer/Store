@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\StoreApp",
+    "\\StoreApp\\Controllers",
+    "\\StoreApp\\Models",
+    "\\StoreApp\\Views",
+    "\\StoreApp\\Views\\Product"
+  ],
+  "SelectedNode": "\\StoreApp\\Models\\RepositoryContext.cs",
+  "PreviewInSolutionExplorer": false
+}

@@ -4,7 +4,7 @@
 
 namespace StoreApp.Migrations
 {
-    public partial class initalandseeding : Migration
+    public partial class inital : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

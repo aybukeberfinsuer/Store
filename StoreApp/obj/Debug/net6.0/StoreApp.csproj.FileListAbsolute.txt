@@ -57,3 +57,5 @@ C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\StoreApp.
 C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\libman.json
 C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Entities.dll
 C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Entities.pdb
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.dll
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.pdb

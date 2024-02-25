@@ -1,14 +1,15 @@
-using Entities.Models;
+﻿using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace StoreApp.Models
-{
-    public class RepositoryContext:DbContext
+namespace Repositories{
+public class RepositoryContext:DbContext
     {
         public DbSet<Product> Products { get; set; }
-    
-    public RepositoryContext(DbContextOptions<RepositoryContext> options) :base(options)
-    {
+
+        public DbSet<Category> Categories {get; set;}
+
+        public RepositoryContext(DbContextOptions<RepositoryContext> options) :base(options)
+        {
         
     }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -20,9 +21,13 @@ namespace StoreApp.Models
                 new Product(){Id=3, ProductName="Mouse", Price=500}
                 
             );
+
+            modelBuilder.Entity<Category>().HasData(
+                new Category(){CategoryId=1, CategoryName="Book"},
+                new Category(){CategoryId=2, CategoryName="Electronic"}
+            );
         }
 
     }
-
-    
 }
+ 

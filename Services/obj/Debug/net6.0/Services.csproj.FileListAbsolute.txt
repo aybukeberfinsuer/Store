@@ -1,0 +1,17 @@
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\bin\Debug\net6.0\Services.deps.json
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\bin\Debug\net6.0\Services.dll
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\bin\Debug\net6.0\Services.pdb
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\bin\Debug\net6.0\Entities.dll
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\bin\Debug\net6.0\Repositories.dll
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\bin\Debug\net6.0\Entities.pdb
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\bin\Debug\net6.0\Repositories.pdb
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\Services.csproj.AssemblyReference.cache
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\Services.AssemblyInfoInputs.cache
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\Services.AssemblyInfo.cs
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\Services.csproj.CoreCompileInputs.cache
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\Services.csproj.CopyComplete
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\Services.dll
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\refint\Services.dll
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\Services.pdb
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\Services\obj\Debug\net6.0\ref\Services.dll

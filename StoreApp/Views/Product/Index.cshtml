@@ -1,11 +1,18 @@
-
 @model IQueryable<Product>
 
+<div class="row">
+    <div class="col-md-3">
+      @await Component.InvokeAsync("CategoriesMenu")
+    </div>
     
-<div class="row m-3">
-    @foreach (Product prd in Model)
-{
-    <partial name="_ProductCard" model="@prd" />
-    
-}
+    <div class="col-md-9">
+        <div class="row m-3">
+            @foreach (Product prd in Model)
+            {
+                <partial name="_ProductCard" model="@prd" />
+
+            }
+        </div>
+
+    </div>
 </div>

@@ -1,6 +1,10 @@
-<p>
-    
-        Hello from 
-        CategoriesMenuViewComponent
-   
-</p>
+@model IEnumerable<Category>
+        <div>
+                <ul class="list-group my-4">
+                        @foreach(var item in Model){
+                                <li class="list-group-item">
+                                        @item.CategoryName
+                                </li>
+                        }
+                </ul>
+        </div>

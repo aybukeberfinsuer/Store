@@ -1,4 +1,6 @@
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Services.Contracts;
 
 namespace StoreApp.Areas.Admin.Controllers{
@@ -18,5 +20,21 @@ namespace StoreApp.Areas.Admin.Controllers{
             return View(model);            
         }
         
+        public IActionResult Create(){
+            return View();
+        }
+ 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create([FromForm] Product product){
+
+            if(ModelState.IsValid){
+             _manager.ProductService.CreateProduct(product);
+            return RedirectToAction("Index");
+            }
+            return View();
+            
+        }
+      
     }
 }

@@ -13,6 +13,13 @@ namespace Services{
             _repositorymanager = repositorymanager;
         }
 
+        public void CreateProduct(Product product)
+        {
+           _repositorymanager.Product.Create(product);
+           _repositorymanager.Save();
+
+        }
+
         public IEnumerable<Product> GetAllProducts(bool trackChanges)
         {
             return _repositorymanager.Product.GetAllProducts(trackChanges);

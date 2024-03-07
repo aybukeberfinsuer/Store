@@ -29,9 +29,17 @@ namespace Services{
         {
             var product=_repositorymanager.Product.GetOneProduct(id,trackChanges);
             if(product is null)
-                throw new Exception("Product not found!");
+                throw new Exception("Product not found with ID: " + id);
             return product;
             
+        }
+
+        public void UpdateOneProduct(Product product)
+        {
+            var model =_repositorymanager.Product.GetOneProduct(product.Id,true);
+            model.ProductName=product.ProductName;
+            model.Price=product.Price;
+            _repositorymanager.Save();
         }
     }
 

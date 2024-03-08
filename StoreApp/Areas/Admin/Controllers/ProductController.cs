@@ -1,6 +1,8 @@
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.VisualBasic;
 using Services.Contracts;
 
 namespace StoreApp.Areas.Admin.Controllers{
@@ -21,6 +23,8 @@ namespace StoreApp.Areas.Admin.Controllers{
         }
         
         public IActionResult Create(){
+            ViewBag.Categories=
+            new SelectList(_manager.CategoryService.GetCategories(false),"CategoryId","CategoryName","1");            
             return View();
         }
  

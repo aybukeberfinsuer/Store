@@ -61,3 +61,5 @@ C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Repositor
 C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Repositories.pdb
 C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Services.dll
 C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\Services.pdb
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\aybuk\OneDrive\Masaüstü\MVC\Store\StoreApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

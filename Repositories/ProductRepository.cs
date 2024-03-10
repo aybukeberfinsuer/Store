@@ -16,11 +16,12 @@ namespace Repositories{
         public void DeleteOneProduct(Product product) => Remove(product);
         public IQueryable<Product> GetAllProducts(bool trackChanges)=> FindAll(trackChanges);
 
-       
          public Product? GetOneProduct(int id, bool trackChanges)
         {
               return FindByCondition(p=>p.Id.Equals(id),trackChanges);
         }
+
+        public void UpdateOneProduct(Product entity) => Update(entity);
        
     }
 }

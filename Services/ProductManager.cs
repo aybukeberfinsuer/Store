@@ -52,12 +52,20 @@ namespace Services{
             
         }
 
-        public void UpdateOneProduct(Product product)
+        public ProductDtoForUpdate GetOneProductForUpdate(int id, bool trackChanges)
         {
-            var model =_repositorymanager.Product.GetOneProduct(product.Id,true);
-            model.ProductName=product.ProductName;
-            model.Price=product.Price;
-            _repositorymanager.Save();
+            var product=GetOneProduct(id,trackChanges);
+            var productDto=_mapper.Map<ProductDtoForUpdate>(product);
+            return productDto;
+
+        }
+
+    
+        public void UpdateOneProduct(ProductDtoForUpdate productDto)
+        {
+           var entity = _mapper.Map<Product>(productDto);
+           _repositorymanager.Product.UpdateOneProduct(entity);
+           _repositorymanager.Save();
         }
     }
 

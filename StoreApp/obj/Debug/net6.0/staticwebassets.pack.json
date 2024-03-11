@@ -9,16 +9,32 @@
       "PackagePath": "staticwebassets\\html\\Error.html"
     },
     {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\1.jpg",
+      "PackagePath": "staticwebassets\\images\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\2.jpg",
+      "PackagePath": "staticwebassets\\images\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\3.jpg",
+      "PackagePath": "staticwebassets\\images\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\4.jpg",
+      "PackagePath": "staticwebassets\\images\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\5.jpg",
+      "PackagePath": "staticwebassets\\images\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\6.jpg",
+      "PackagePath": "staticwebassets\\images\\6.jpg"
+    },
+    {
       "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\computer.jpeg",
       "PackagePath": "staticwebassets\\images\\computer.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\keyboard.jpeg",
-      "PackagePath": "staticwebassets\\images\\keyboard.jpeg"
-    },
-    {
-      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\mouse.jpeg",
-      "PackagePath": "staticwebassets\\images\\mouse.jpeg"
     },
     {
       "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",

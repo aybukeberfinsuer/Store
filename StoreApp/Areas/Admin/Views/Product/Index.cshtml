@@ -13,6 +13,7 @@
                 <th>Id</th>
                 <th>Product Name</th>
                 <th>Price</th>
+                <th>Summary</th>
                 <th>Operations</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                     <td>@prd.Id</td>
                     <td>@prd.ProductName</td>
                     <td>@prd.Price.ToString("c")</td>
+                    <td>@prd.Summary</td>
                     <td>
                         <div class="btn-group">
                             <a class="btn btn-warning" asp-action="Update" asp-route-id="@prd.Id">

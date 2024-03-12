@@ -5,8 +5,10 @@
 
 </div>
 
-<form method="post" asp-action="Update"> 
+<form method="post" asp-action="Update" enctype="multipart/form-data"> 
+
     <div class="text-danger" asp-validation-summary="All"></div>
+
     <input type="hidden" asp-for="Id" />
           <div class="form-group my-3">
         <label asp-for="CategoryId"></label>
@@ -18,10 +20,23 @@
         <label asp-for="ProductName ">Product Name</label>
         <input asp-for="ProductName" class="form-control" />
     </div>
-
     <div class="form-group my-3">
+        <label asp-for="Summary ">Summary</label>
+        <input asp-for="Summary" class="form-control" />
+    </div>
+
+    <div >
         <label asp-for="Price"></label>
         <input asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="form-group my-3" >
+        <img class="rounded shadow" width="150" src="@Model?.ImageUrl" />
+    </div>
+
+    <div class="form-group my-3">
+        <label asp-for="ImageUrl"></label>
+        <input type="file" name="file" class="form-control" />
     </div>
     <div class="form-group my-3">
         <div class="btn-group">

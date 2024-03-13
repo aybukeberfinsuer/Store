@@ -1,14 +1,22 @@
 @model Product
-
-
 <div class="col-sm-12 col-md-4  m-3">
-
-<div class="card" style="width: 18rem;">
-  <img src="@Model?.ImageUrl" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">@Model.ProductName</h5>
-    <p class="card-text">@Model.Summary</p>
-    <a asp-action="Get" asp-route-id="@Model.Id" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+    <div class="card" style="width: 18rem;">
+        <img src="@Model?.ImageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.ProductName</h5>
+            <p class="card-text">@Model.Summary</p>
+            <div class="d-flex justify-content-between">
+                <a asp-action="Get" asp-route-id="@Model.Id" class="btn btn-primary">Details</a>
+            
+                <form id="@Model.Id" asp-page="/cart" class="mr-2" method="post" >
+                    <input type="hidden" asp-for="Id"/>
+                    <input type="text" name="returnUrl" value="/Product/Get/@Model.Id"/>
+                    
+                    <button type="submit" class="btn btn-outline-primary">
+                        <i class="fa fa-cart-plus"></i> Add 
+                    </button>
+                </form>
+                </div>
+        </div>
+    </div>
 </div>

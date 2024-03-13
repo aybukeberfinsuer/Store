@@ -9,13 +9,14 @@ namespace StoreApp.Pages{
     public class CartModel:PageModel
     {
         private readonly IServiceManager _manager;
+        public Cart Cart { get; set; } //IoC yapıyoruz
 
-        public CartModel(IServiceManager manager)
+        public CartModel(IServiceManager manager, Cart cart)
         {
             _manager = manager;
+            Cart = cart;
         }
 
-        public Cart Cart { get; set; } //IoC yapıyoruz
 
         public string  ReturnUrl { get; set; } ="/";
 

@@ -1,4 +1,5 @@
 using System.Net;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Repositories.Contracts;
@@ -24,6 +25,8 @@ builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
 builder.Services.AddAutoMapper(typeof(Program));
+
+builder.Services.AddSingleton<Cart>();
 
 
 var app = builder.Build();

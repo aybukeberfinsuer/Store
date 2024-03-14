@@ -24,7 +24,16 @@
                     <td>@line.Quantity</td>
                     <td>@line.Product.Price.ToString("c")</td>
                     <td>@((line.Product.Price * line.Quantity).ToString("c2"))</td>
-                    <td></td>
+                    <td>
+                        <form method="post" asp-page-handler="Remove">
+                            <input type="hidden" name="id" value="@line.Product.Id">
+                            <input type="hidden" name="returnUrl" value="@Model.ReturnUrl">
+                            <button type="submit" class="btn btn-sm btn-danger">
+                                <i class="fa fa-remove">Remove </i>
+                            </button>
+
+                        </form>
+                    </td>
                 </tr>
             }
         </tbody>

@@ -3,40 +3,53 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Services.Contracts;
+using StoreApp.Infrastructure.Extensions;
 
-namespace StoreApp.Pages{
+namespace StoreApp.Pages
+{
 
-    public class CartModel:PageModel
+    public class CartModel : PageModel
     {
         private readonly IServiceManager _manager;
         public Cart Cart { get; set; } //IoC yapıyoruz
 
-        public CartModel(IServiceManager manager, Cart cart)
+        public CartModel(IServiceManager manager)
         {
             _manager = manager;
-            Cart = cart;
         }
 
 
-        public string  ReturnUrl { get; set; } ="/";
+        public string ReturnUrl { get; set; } = "/";
 
-        public void OnGet(string returnUrl){
-            ReturnUrl= returnUrl ?? "/";
-        }
-
-        public IActionResult OnPost(int Id,string returnUrl)
+        public void OnGet(string returnUrl)
         {
-            Product? product= _manager.ProductService.GetOneProduct(Id,false);
+            ReturnUrl = returnUrl ?? "/";
+            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            //varsa olan cart nesnesini yoksa yeni bir Cart nesnesi oluşturfuk
+        }
 
-            if(product is not null){
-                Cart.AddItem(product,1);
+        public IActionResult OnPost(int Id, string returnUrl)
+        {
+            Product? product = _manager.ProductService.GetOneProduct(Id, false);
+
+            if (product is not null)
+            {
+
+                Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+                Cart.AddItem(product, 1);
+                HttpContext.Session.SetJson<Cart>("cart", Cart);
             }
             return Page(); //returnUrl logici yönlendireceğiz.
-            
+
         }
 
-        public IActionResult OnPostRemove(int Id,string returnUrl){
-            Cart.RemoveLine(Cart.Lines.First(cl=>cl.Product.Id.Equals(Id)).Product);
+        public IActionResult OnPostRemove(int Id, string returnUrl)
+        {
+
+
+            Cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
+            Cart.RemoveLine(Cart.Lines.First(cl => cl.Product.Id.Equals(Id)).Product);
+            HttpContext.Session.SetJson<Cart>("cart", Cart);
             return Page();
         }
     }

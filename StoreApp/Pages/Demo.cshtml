@@ -8,8 +8,9 @@
 <div class="my-5 text-center">
     <div class="display-6">
         Hello 
-        @Model.FullName
+        @Model?.FullName
     </div>
+    <p class="text-danger">@HttpContext.Session.GetString("name") </p>
     <div class="form-group">
         <form method="post" asp-page="/demo">
 

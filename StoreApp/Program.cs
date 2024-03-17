@@ -1,6 +1,7 @@
 using System.Net;
 using Entities.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Repositories;
 using Repositories.Contracts;
 using Services;
@@ -18,7 +19,14 @@ builder.Services.AddDbContext<RepositoryContext>(options =>
 });
 
 builder.Services.AddDistributedMemoryCache();
-builder.Services.AddSession();
+builder.Services.AddSession(options =>{
+
+    options.Cookie.Name="StoreApp.Session";
+    options.IdleTimeout=TimeSpan.FromMinutes(10);
+
+});
+
+builder.Services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
 
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
@@ -30,7 +38,7 @@ builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
-builder.Services.AddSingleton<Cart>();
+builder.Services.AddScoped<Cart>();
 
 
 var app = builder.Build();

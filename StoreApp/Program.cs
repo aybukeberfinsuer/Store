@@ -6,6 +6,7 @@ using Repositories;
 using Repositories.Contracts;
 using Services;
 using Services.Contracts;
+using StoreApp.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -38,7 +39,7 @@ builder.Services.AddScoped<ICategoryService, CategoryManager>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
-builder.Services.AddScoped<Cart>();
+builder.Services.AddScoped<Cart>(c=>SessionCart.GetCart(c));
 
 
 var app = builder.Build();

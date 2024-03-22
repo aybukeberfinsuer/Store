@@ -1,4 +1,6 @@
 @model Product
+<div class="text-center">
+
 
 <div class="row">
     <div class="col-md-12">
@@ -14,8 +16,19 @@
 </div>
 
 <div class="btn-group " >
-    <a class="btn btn-primary" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house"></i> Home</a>
+    <a class="btn btn-outline btn-primary" asp-controller="Home" asp-action="Index"><i class="fa-solid fa-house"></i> Home</a>
+    <form id="@Model.Id" asp-page="/cart" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" name="returnUrl" value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+        <button type="submit" class="btn btn-outline-primary">
+            <i class="fa fa-cart-plus"></i>
+        </button>
+    
+    </form>
+
+  
     <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index"><i class="fa-solid fa-list"></i> Product</a>
 </div>
 
+</div>
 <hr>

@@ -29,13 +29,17 @@ builder.Services.AddSession(options =>{
 
 builder.Services.AddSingleton<IHttpContextAccessor,HttpContextAccessor>();
 
+//Repositories kısmı için
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 
+//Servis kısmı için
 builder.Services.AddScoped<IServiceManager, ServiceManager>();
 builder.Services.AddScoped<IProductService, ProductManager>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<IOrderService, OrderManager>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 

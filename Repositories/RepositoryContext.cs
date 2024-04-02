@@ -10,6 +10,8 @@ public class RepositoryContext:DbContext
 
         public DbSet<Category> Categories {get; set;}
 
+        public DbSet<Order> Orders {get; set;}
+
         public RepositoryContext(DbContextOptions<RepositoryContext> options) :base(options)
         {
         

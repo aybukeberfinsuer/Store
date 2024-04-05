@@ -1,9 +1,11 @@
 @model IEnumerable<Category>
-        <div>
+        <div my-4>
                 <ul class="list-group my-4">
                         @foreach(var item in Model){
                                 <li class="list-group-item">
-                                        @item.CategoryName
+                                        <a asp-action="Index" asp-route-categoryId="@item.CategoryId">
+                                                @item.CategoryName
+                                         </a>                                        
                                 </li>
                         }
                 </ul>

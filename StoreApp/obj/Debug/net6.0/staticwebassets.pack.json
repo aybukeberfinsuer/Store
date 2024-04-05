@@ -29,8 +29,12 @@
       "PackagePath": "staticwebassets\\images\\5.jpg"
     },
     {
-      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\6.jpg",
-      "PackagePath": "staticwebassets\\images\\6.jpg"
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\6.jpeg",
+      "PackagePath": "staticwebassets\\images\\6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\7.jpeg",
+      "PackagePath": "staticwebassets\\images\\7.jpeg"
     },
     {
       "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\computer.jpeg",

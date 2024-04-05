@@ -53,6 +53,13 @@ namespace StoreApp.Infrastructure.Extensions
             service.AddScoped<IOrderService, OrderManager>();
         }
 
+        public static void ConfigureRouting(this IServiceCollection service){
+            service.AddRouting(options => 
+            {
+                options.LowercaseUrls=true;
+                options.AppendTrailingSlash=false;
+            });
+        }
 
     }
 

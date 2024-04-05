@@ -59,13 +59,18 @@ namespace Services{
             return productDto;
 
         }
+      
 
-    
         public void UpdateOneProduct(ProductDtoForUpdate productDto)
         {
            var entity = _mapper.Map<Product>(productDto);
            _repositorymanager.Product.UpdateOneProduct(entity);
            _repositorymanager.Save();
+        }
+
+        IEnumerable<Product> IProductService.GetShowCaseProducts(bool trackChanges)
+        {
+           return _repositorymanager.Product.GetShowCaseProducts(trackChanges);
         }
     }
 

@@ -124,6 +124,9 @@ namespace StoreApp.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("ShowCase")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Summary")
                         .HasColumnType("TEXT");
 
@@ -141,6 +144,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/1.jpg",
                             Price = 17000m,
                             ProductName = "Computer",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -150,6 +154,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/2.jpg",
                             Price = 1000m,
                             ProductName = "Keyboard",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -159,6 +164,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/3.jpg",
                             Price = 500m,
                             ProductName = "Mouse",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -168,6 +174,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/4.jpg",
                             Price = 50m,
                             ProductName = "Pride and Prejudice",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -177,6 +184,27 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/5.jpg",
                             Price = 50m,
                             ProductName = "Hamlet",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryId = 2,
+                            ImageUrl = "/images/6.jpeg",
+                            Price = 1145m,
+                            ProductName = "Xp-pen",
+                            ShowCase = true,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryId = 2,
+                            ImageUrl = "/images/7.jpeg",
+                            Price = 4445m,
+                            ProductName = "Galaxy FE",
+                            ShowCase = true,
                             Summary = ""
                         });
                 });

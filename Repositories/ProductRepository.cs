@@ -25,7 +25,9 @@ namespace Repositories
         {
             return _context
             .Products
-            .FilteredByCategoryId(param.CategoryId);
+            .FilteredByCategoryId(param.CategoryId)
+            .FilteredBySearchTerm(param.SearchTerm)
+            .FilteredByPrice(param.MinPrice,param.MaxPrice,param.IsValidPrice);
 
         }
 

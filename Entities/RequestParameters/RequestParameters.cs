@@ -3,8 +3,9 @@ namespace Entities.RequestParameters
 
     public abstract class RequestParameters
     {
-
-        public int? CategoryId { get; set; }
+        public string? SearchTerm { get; set; }
+              
+    
     }
     
 }

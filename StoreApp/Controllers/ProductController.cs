@@ -5,6 +5,7 @@ using Repositories;
 using Repositories.Contracts;
 using Services.Contracts;
 using Entities.RequestParameters;
+using StoreApp.Models;
 
 namespace StoreApp.Controllers
 {
@@ -21,7 +22,15 @@ namespace StoreApp.Controllers
         public IActionResult Index(_ProductRequestParameters param)
         {
              var model = _manager.ProductService.GetAllProductsWithDetails(param);
-            return View(model);
+             var pagination= new Pagination(){
+                CurrenPage=param.PageNumber,
+                ItemsPerPage=param.PageSize,
+                TotalItems = _manager.ProductService.GetAllProducts(false).Count()
+             };
+            return View(new ProductlistViewModel(){
+                Products=model,
+                Pagination=pagination
+            });
         }
 
 

@@ -11,7 +11,7 @@ namespace StoreApp.Infrastructure.TagHelpers
         private readonly IServiceManager _manager;
         
         [HtmlAttributeName("number")]
-        public int Number { get; set; }
+        public int Number { get; set; } //Kaç kayıt saklayacağız.
 
         public LastestProductTagHelper(IServiceManager manager)
         {
@@ -33,7 +33,7 @@ namespace StoreApp.Infrastructure.TagHelpers
             h6.InnerHtml.AppendHtml(" Lastest Products");
 
             TagBuilder ul = new TagBuilder("ul");
-            var products = _manager.ProductService.GetLastestProducts(5,false);
+            var products = _manager.ProductService.GetLastestProducts(Number,false);
             foreach (Product product in products)
             {
                  TagBuilder li = new TagBuilder("li");

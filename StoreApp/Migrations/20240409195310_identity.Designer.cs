@@ -11,8 +11,8 @@ using Repositories;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240408191226_startAndSeedIdentity")]
-    partial class startAndSeedIdentity
+    [Migration("20240409195310_identity")]
+    partial class identity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -239,22 +239,22 @@ namespace StoreApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "2e8ec927-8db2-4933-a3e0-cd927e050023",
-                            ConcurrencyStamp = "4a87c436-d80b-44fd-bf80-0d336abb558c",
+                            Id = "aa2087fd-f98d-4658-b8da-1be355dda8c6",
+                            ConcurrencyStamp = "2ece76ac-c7bf-4d8e-94c1-abc34ac0b8d9",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "6c292d1b-0f33-4e8e-80b4-03eff7386081",
-                            ConcurrencyStamp = "41b64a3f-dad9-43b4-98ac-3275d73d55b3",
+                            Id = "031eebfc-9c9b-4270-a372-76b08570c5aa",
+                            ConcurrencyStamp = "8f05f659-3585-4407-8f43-eec7615b9e14",
                             Name = "Editor",
                             NormalizedName = "EDITOR"
                         },
                         new
                         {
-                            Id = "a3248566-4978-4565-9728-2b08606dae19",
-                            ConcurrencyStamp = "fbc2689a-4a89-4564-8845-2c3625951b6e",
+                            Id = "b93755cc-e70b-4061-b923-04761e4a06a6",
+                            ConcurrencyStamp = "e85439aa-d311-4ee8-8a28-d993fe1305e7",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });

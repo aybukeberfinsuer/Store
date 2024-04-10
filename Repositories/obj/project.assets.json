@@ -1376,8 +1376,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
-              "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj"
+            "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
+              "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj"
             }
           }
         }

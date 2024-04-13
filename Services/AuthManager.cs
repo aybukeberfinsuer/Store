@@ -20,7 +20,7 @@ namespace Services
 
         public IEnumerable<IdentityRole> Roles => _rolemanager.Roles;
 
-         public async Task<IdentityResult> CreateUser(UserDtoForCreation userDto)
+        public async Task<IdentityResult> CreateUser(UserDtoForCreation userDto)
         {
             var user = _mapper.Map<IdentityUser>(userDto);
             var result = await _usermanager.CreateAsync(user, userDto.Password);
@@ -37,6 +37,13 @@ namespace Services
 
             return result;
         }
+
+        public async Task<IdentityResult> DeleteOneUser(string userName)
+        {
+            var user = await GetOneUser(userName);
+            return await _usermanager.DeleteAsync(user);
+        }
+
         public IEnumerable<IdentityUser> GetAllUser()
         {
             return _usermanager.Users.ToList();
@@ -44,19 +51,27 @@ namespace Services
 
         public async Task<IdentityUser> GetOneUser(string userName)
         {
-            return await _usermanager.FindByNameAsync(userName);
+            var user = await _usermanager.FindByNameAsync(userName);
+            return user;
         }
 
         public async Task<UserDtoForUpdate> GetOneUserForUpdate(string userName)
         {
             var user = await GetOneUser(userName);
-            if( user is not null){
-                var userDto=_mapper.Map<UserDtoForUpdate>(user);
-                userDto.Roles= new HashSet<string>(Roles.Select(r=>r.Name).ToList());
-                userDto.UserRoles= new HashSet<string>(await _usermanager.GetRolesAsync(user));
-                return userDto;
-            }
-            throw new Exception("An error occured.");
+            var userDto = _mapper.Map<UserDtoForUpdate>(user);
+            userDto.Roles = new HashSet<string>(Roles.Select(r => r.Name).ToList());
+            userDto.UserRoles = new HashSet<string>(await _usermanager.GetRolesAsync(user));
+            return userDto;
+
+        }
+
+        public async Task<IdentityResult> ResetPassword(ResetPasswordDto model)
+        {
+            var user = await GetOneUser(model.UserName);
+            await _usermanager.RemovePasswordAsync(user);
+            var result = await _usermanager.AddPasswordAsync(user, model.Password);
+            return result;
+
         }
 
         public async Task Update(UserDtoForUpdate userDto)
@@ -64,19 +79,15 @@ namespace Services
             var user = await GetOneUser(userDto.UserName);
             user.PhoneNumber = userDto.PhoneNumber;
             user.Email = userDto.Email;
-
-            if (user is not null)
+            var result = await _usermanager.UpdateAsync(user);
+            if (userDto.Roles.Count > 0)
             {
-                var result = await _usermanager.UpdateAsync(user);
-                if (userDto.Roles.Count > 0)
-                {
-                    var userRoles = await _usermanager.GetRolesAsync(user);
-                    var r1 = await _usermanager.RemoveFromRolesAsync(user, userRoles);
-                    var r2 = await _usermanager.AddToRolesAsync(user, userDto.Roles);
-                }
-                return;
+                var userRoles = await _usermanager.GetRolesAsync(user);
+                var r1 = await _usermanager.RemoveFromRolesAsync(user, userRoles);
+                var r2 = await _usermanager.AddToRolesAsync(user, userDto.Roles);
             }
-            throw new Exception("System has problem with user update.");
+            return;
+
 
 
         }

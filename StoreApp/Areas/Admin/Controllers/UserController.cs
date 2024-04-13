@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Entities.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
@@ -57,6 +58,36 @@ namespace StoreApp.Areas.Admin.Controllers
             }
             return View();
         }
+
+        public async Task<IActionResult> ResetPassword([FromRoute(Name ="id")] string id){
+            return View(new ResetPasswordDto(){
+                UserName=id
+            });
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+         public async Task<IActionResult> ResetPassword([FromForm] ResetPasswordDto model){
+
+            var result= await _servicemanager.AuthService.ResetPassword(model);
+            return result.Succeeded
+                ? RedirectToAction("Index")
+                : View();
+         }
+
+
+         
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteOneUser([FromForm] UserDto userDto){
+
+           var result= await _servicemanager.AuthService.DeleteOneUser(userDto.UserName);
+            return result.Succeeded
+                ? RedirectToAction("Index")
+                : View();
+        }
+
+
 
     }
 }

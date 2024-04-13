@@ -75,7 +75,7 @@ namespace StoreApp.Controllers
 
                 if (roleResult.Succeeded)
                 {
-                    return RedirectToAction("Login", new {ReturnUrl="/"} );
+                    return RedirectToAction("Login", new { ReturnUrl = "/" });
                 }
             }
             else
@@ -88,6 +88,15 @@ namespace StoreApp.Controllers
             }
             return View();
         }
+
+
+        public IActionResult AccessDenied ([FromQuery(Name = "ReturnUrl")] string returUrl)
+        {
+
+            return View();
+
+        }
+
     }
 
 }

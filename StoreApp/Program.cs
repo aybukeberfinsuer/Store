@@ -21,6 +21,7 @@ builder.Services.ConfigureSession();
 builder.Services.ConfigureRepositoryRegistration();
 builder.Services.ConfigureServiceRegistiration();
 builder.Services.ConfigureRouting();
+builder.Services.ConfigureApplicationCookie();
 
 
 

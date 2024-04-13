@@ -33,8 +33,8 @@ app.UseStaticFiles();
 app.UseSession();
 app.UseHttpsRedirection();
 app.UseRouting();
-app.UseAuthorization();
 app.UseAuthentication();
+app.UseAuthorization();
 app.UseEndpoints(endpoint =>
 {
     endpoint.MapAreaControllerRoute(

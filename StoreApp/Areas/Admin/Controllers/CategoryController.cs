@@ -1,13 +1,23 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Services.Contracts;
 
 namespace StoreApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class CategoryController:Controller
+    [Authorize(Roles ="Admin")]
+    public class CategoryController : Controller
     {
-        public  IActionResult Index(){
-            return View();
-            
+        private readonly IServiceManager _manager;
+
+        public CategoryController(IServiceManager manager)
+        {
+            _manager = manager;
+        }
+
+        public IActionResult Index()
+        {
+            return View(_manager.CategoryService.GetCategories(false));
         }
     }
     

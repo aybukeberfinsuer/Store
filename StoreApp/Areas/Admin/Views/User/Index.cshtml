@@ -25,7 +25,7 @@
             <tr>
                 <td>@user.Id</td>
                 <td>@user.UserName</td>
-                <td>-</td>
+                <td user-name="@user.UserName" user-role=""></td>
                 <td>
                     <div class="btn-group">
                         <a class="btn btn btn-warning rounded-0" asp-action="Update" asp-route-id="@user.UserName">
@@ -35,13 +35,13 @@
                             <i class="fa fa-solid fa-edit"></i>
                             Reset Password</a>
                         <form method="post" asp-action="DeleteOneUser">
-                            <input type="hidden" name="UserName" value="@user.UserName"/>
+                            <input type="hidden" name="UserName" value="@user.UserName" />
                             <button type="submit" class="btn btn-danger rounded-0">
                                 <i class="fa fa-solid fa-trash"></i>
                                 Delete user
                             </button>
                         </form>
-                        
+
 
                     </div>
                 </td>

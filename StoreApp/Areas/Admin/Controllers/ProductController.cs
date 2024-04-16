@@ -43,6 +43,8 @@ namespace StoreApp.Areas.Admin.Controllers
 
         public IActionResult Create()
         {
+            
+            TempData["info"] = "Please fill the form.";
             ViewBag.Categories = GetCategoriesSelectlist();
             return View();
         }
@@ -52,17 +54,19 @@ namespace StoreApp.Areas.Admin.Controllers
         public async Task<IActionResult> Create([FromForm] ProductDtoForInsertion productDto,IFormFile file)
         {
 
-            if (ModelState.IsValid)
+           if (ModelState.IsValid)
             {
-                //file operation
-                string path= Path.Combine(Directory.GetCurrentDirectory(),"wwwroot","images",file.FileName);
-               using (var stream = new FileStream(path,FileMode.Create))
-               {
+                // file operation
+                string path = Path.Combine(Directory.GetCurrentDirectory(),
+                "wwwroot","images",file.FileName);
+
+                using (var stream = new FileStream(path,FileMode.Create))
+                {
                     await file.CopyToAsync(stream);
-               }
-               
-               productDto.ImageUrl=String.Concat("/images/",file.FileName);
+                }
+                productDto.ImageUrl = String.Concat("/images/",file.FileName);
                 _manager.ProductService.CreateProduct(productDto);
+                TempData["success"] = $"{productDto.ProductName} has been created.";
                 return RedirectToAction("Index");
             }
             return View();

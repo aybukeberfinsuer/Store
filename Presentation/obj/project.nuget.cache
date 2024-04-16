@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VQcerW17ilxZxPOo7EbHn9VShIHrAcYL/bskxrcRTmYwr8rNmqT5ISgTVJ9xPeJXr07Luyc62k7tDrgUZ9GIFA==",
+  "dgSpecHash": "/rtVD5Rby6tg4SF+A1GrP8r8VoT+AqFAAMJvaeIQ+yYLq9q4qjHJUn/Kq57Pz3Qp/TbcLu5PGqO1mOXD1OEWEA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Presentation\\Presentation.csproj",
+  "projectFilePath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Presentation\\Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aybuk\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\aybuk\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

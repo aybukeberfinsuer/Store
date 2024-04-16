@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v+Gy1fXHnhCHvhn/BoNYCuTSsdrZ5ND/NDqqGQ6+k08=",
+  "Hash": "rcO65KLuRIunA7clBkNGmqmwK1Ym43ugBG15WhCNnhM=",
   "Source": "StoreApp",
   "BasePath": "_content/StoreApp",
   "Mode": "Default",
@@ -185,6 +185,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\computer.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\ikisehrinhikayesi.jpeg",
+      "SourceId": "StoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\",
+      "BasePath": "_content/StoreApp",
+      "RelativePath": "images/ikisehrinhikayesi.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\ikisehrinhikayesi.jpeg"
     },
     {
       "Identity": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",

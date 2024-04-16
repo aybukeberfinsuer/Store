@@ -41,6 +41,10 @@
       "PackagePath": "staticwebassets\\images\\computer.jpeg"
     },
     {
+      "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\images\\ikisehrinhikayesi.jpeg",
+      "PackagePath": "staticwebassets\\images\\ikisehrinhikayesi.jpeg"
+    },
+    {
       "Id": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

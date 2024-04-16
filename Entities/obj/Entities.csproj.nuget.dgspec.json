@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {}
+    "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
+    "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj",
+        "projectUniqueName": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj",
+        "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\aybuk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\obj\\",
+        "outputPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

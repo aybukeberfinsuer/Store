@@ -16,6 +16,8 @@ namespace StoreApp.Areas.Admin.Controllers
         }
 
         public IActionResult Index(){
+            
+            ViewData["Title"]="Orders";
             var orders = _manager.OrderService.Orders;
             return View(orders);
         }

@@ -4,14 +4,14 @@
     "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\StoreApp\\StoreApp.csproj": {}
   },
   "projects": {
-    "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
+    "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\aybuk\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -138,14 +138,14 @@
         }
       }
     },
-    "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
+        "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\aybuk\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\obj\\",
+        "outputPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -166,8 +166,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
-                "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj"
+              "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj"
               }
             }
           }
@@ -183,6 +183,10 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.0, )"
             },
@@ -239,11 +243,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
-                "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj"
+              "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj"
               },
-              "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
-                "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj"
+              "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -311,14 +315,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
-                "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj"
+              "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Entities\\Entities.csproj"
               },
               "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Presentation\\Presentation.csproj": {
                 "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Presentation\\Presentation.csproj"
               },
-              "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
-                "projectPath": "c:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj"
+              "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Repositories\\Repositories.csproj"
               },
               "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Services\\Services.csproj": {
                 "projectPath": "C:\\Users\\aybuk\\OneDrive\\Masaüstü\\MVC\\Store\\Services\\Services.csproj"

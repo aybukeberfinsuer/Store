@@ -17,6 +17,7 @@ namespace StoreApp.Areas.Admin.Controllers{
 
         public IActionResult Index(){
 
+            ViewData["Title"]="Roles";
             return View(_servicemanager.AuthService.Roles);
         }
     }

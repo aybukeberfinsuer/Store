@@ -15,6 +15,8 @@ public class CategoryController:Controller
         }
 
         public IActionResult Index(){
+            
+            ViewData["Title"]="Categories";
             var model= _manager.CategoryService.GetCategories(false);
             return View(model);
         }

@@ -25,6 +25,7 @@ namespace StoreApp.Areas.Admin.Controllers
 
         public IActionResult Index([FromQuery] _ProductRequestParameters p)
         {
+            ViewData["Title"]="Products";
               var model = _manager.ProductService.GetAllProductsWithDetails(p);
              var pagination= new Pagination(){
                 CurrenPage=p.PageNumber,
@@ -78,6 +79,7 @@ namespace StoreApp.Areas.Admin.Controllers
         {
             ViewBag.Categories = GetCategoriesSelectlist();
             var model = _manager.ProductService.GetOneProductForUpdate(id, false);
+            ViewData["Title"]=model.ProductName;
             return View(model);
         }
 
@@ -111,6 +113,7 @@ namespace StoreApp.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
 
+            TempData["danger"] = "Data has been removed."; 
                 _manager.ProductService.DeleteOneProduct(id);
                 return RedirectToAction("Index");
             }

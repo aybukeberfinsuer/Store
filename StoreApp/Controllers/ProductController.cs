@@ -21,6 +21,8 @@ namespace StoreApp.Controllers
 
         public IActionResult Index(_ProductRequestParameters param)
         {
+            
+            ViewData["Title"]="Products";
              var model = _manager.ProductService.GetAllProductsWithDetails(param);
              var pagination= new Pagination(){
                 CurrenPage=param.PageNumber,
